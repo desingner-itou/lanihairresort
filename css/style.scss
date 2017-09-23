@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import "compass";
+@import "org";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@font-face {
+   font-family: 'noto';
+   font-style: normal;
+   font-weight: 500;
+   src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.otf) format('opentype');
+}
+@font-face {
+   font-family: 'noto-bold';
+   font-style: normal;
+   font-weight: 500;
+   src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.otf) format('opentype');
+}
+
+$light-gray: #eee;
+$white: #fff;
+$black: #000;
+
+$color-border: $light-gray;
+
+
+
+/*  default  */
+html{
+	font-size: 16px;
+}
+body{
+	font-family: 'noto';
+	line-height: 1.7;
+}
+*{
+	transition: all .5s;
+}
+a{
+	&:hover{
+	}
+}
+
+
+
+/* default */
+
+img{
+	max-width: 100%;
+}
+
+section,aside,article{
+	@include cf;
+}
+
+/* add */
+
+section,aside{
+	margin-bottom: 45px;
+}
+.flex{
+	@include flex;
+}
+
+.wrap{
+	max-width: 1000px;
+	@include cf;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+article{
+	header{
+		margin-bottom: 30px;
+	}
+}
+
+
+/*title*/
+
+
+
+.title{
+	&__main-1{
+		text-align: center;
+		font-family: 'noto-bold';
+		margin-bottom: 0.2em;
+		@include font-size(30);
+	}
+	&__desc{
+		display: block;
+		text-align: center;
+		@include font-size(10);
+	}
+}
+
+.column{
+	&__3{
+		@include flex;
+		section{
+			@include cf;
+			width: 32%;
+			margin-left: 2%;
+			float: left;
+			&:first-child,
+			&:nth-child(3n+1){
+				margin-left: 0px;
+			}
+		}
+	}
+}
+
+.price{
+	border: 1px solid $color-border;
+	@include border-radius(5px 5px 5px 5px);
+	header{
+		text-align: center;
+		background-color: $black;
+		color: $white;
+		margin-bottom: 0px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		@include border-radius(5px 5px 0px 0px);
+	}
+	&__title{
+		@include font-size(24);
+		font-family: 'noto-bold';
+	}
+	&__description{
+		@include font-size(12);
+	}
+	&__list{
+		padding: 15px;
+		margin: 0px;
+		list-style-type: none;
+		li{
+			border-bottom: 1px solid $color-border;
+			padding: 0.3em 1em;
+		}
+		&-none{
+			text-decoration: line-through;
+		}
+	}
+}
