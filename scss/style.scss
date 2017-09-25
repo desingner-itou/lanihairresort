@@ -28,9 +28,12 @@
         url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.otf) format('opentype');
 }
 
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 $light-gray: #eee;
 $white: #fff;
 $black: #505050;
+$ivory: #f0e4d2;
 
 $color-border: $light-gray;
 
@@ -39,11 +42,13 @@ $color-border: $light-gray;
 /*  default  */
 html{
 	font-size: 16px;
+	margin: 0px;
 }
 body{
 	font-family: 'noto';
 	line-height: 1.7;
 	color: $black;
+	background:$ivory url('../images/bg.png') left top repeat;
 }
 *{
 	transition: all .5s;
@@ -98,6 +103,86 @@ $width: 1080px;
 		position: absolute;
 		right: 18px;
 		bottom: 25px;
+	}
+}
+
+/*********************
+	.header
+**********************/
+.header{
+	&__inner{
+		height: 100vh;
+		position: relative;
+	}
+	&__logo{
+		position: absolute;
+		top: 5%;
+		left: 50%;
+		transform:translateX(-50%);
+		z-index: 10;
+	}
+	&__catch{
+		position: absolute;
+		max-width: 1000px;
+		top: 50%;
+		left: 50%;
+		transform:translateX(-50%) translateY(-50%);
+		text-align: center;
+		z-index: 10;
+		letter-spacing: 3px;
+		line-height: 2.5;
+		@include font-size(24);
+	}
+	&__bg{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0px;
+		background:transparent url('../images/main-1.png') center top no-repeat;
+		background-size: cover;
+	}
+}
+
+/*********************
+	.nav
+**********************/
+.nav{
+	// width: calc(1 / 7);
+	width: 100%;
+	.menu-item{
+		text-align: center;
+		width: calc(100% / 6);
+		font-family: 'Oswald', sans-serif;
+		font-weight: bold;
+		@include font-size(16);
+		span{
+			@include font-size(12);
+			@include sans-serif('noto');
+			font-weight: normal;
+		}
+		a{
+			color: darken($black, 100%);
+		}
+	}
+}
+#gloval{
+	margin-bottom: 0px;
+}
+#gnavi{
+	float: left;
+	width: calc(100% / 1.2);
+}
+.gnav{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	left: 0px;
+	background-color: $white;
+	&__inner{
+		@include wrap(1000px);
+	}
+	&__contact{
+		margin-top: 10px;
 	}
 }
 

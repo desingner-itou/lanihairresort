@@ -42,6 +42,11 @@
 
 register_nav_menus();
 
+// メニューのタイトル下に左部見出しをつける
+function description_in_nav_menu($item_output, $item){
+    return preg_replace('/(<a.*?>[^<]*?)</', '$1' . "<br /><span>{$item->attr_title}</span><", $item_output);
+}
+add_filter('walker_nav_menu_start_el', 'description_in_nav_menu', 10, 4);
 
 // AdvancedCustomFieldのGooglemap表示
 function my_acf_google_map_api( $api ){

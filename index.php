@@ -8,11 +8,22 @@ Template Name: トップページ -
 <main id="home">
 	
 <header class="header">
-	<div class="header__logo">
-		<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
+	<div class="header__inner">
+		<div class="header__logo">
+			<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
+		</div>
+		<div class="header__catch">
+			<p>
+				“Lani”とはハワイ語で天国・楽園・・・<br>
+				五感で感じる癒し空間と心のこもった接客で至福の時間をお過ごしください。
+			</p>
+		</div>
+		<div class="header__bg"></div>
 	</div>
-	<div class="haeder__bg"></div>
+	<?php get_template_part( 'parts', 'glovalnav' ) ?>
 </header>
+
+
 
 <article class="intro parallax">
 	<div class="intro__inner parallax__inner">

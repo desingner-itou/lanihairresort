@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* box-shadow */
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 @font-face {
   font-family: 'noto-light';
   font-style: normal;
@@ -22,12 +23,14 @@
 /*  default  */
 html {
   font-size: 16px;
+  margin: 0px;
 }
 
 body {
   font-family: 'noto';
   line-height: 1.7;
   color: #505050;
+  background: #f0e4d2 url("../images/bg.png") left top repeat;
 }
 
 * {
@@ -53,6 +56,97 @@ h2 {
 }
 
 /* add */
+/*********************
+	.header
+**********************/
+.header__inner {
+  height: 100vh;
+  position: relative;
+}
+.header__logo {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.header__catch {
+  position: absolute;
+  max-width: 1000px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+  z-index: 10;
+  letter-spacing: 3px;
+  line-height: 2.5;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.header__bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  background: transparent url("../images/main-1.png") center top no-repeat;
+  background-size: cover;
+}
+
+/*********************
+	.nav
+**********************/
+.nav {
+  width: 100%;
+}
+.nav .menu-item {
+  text-align: center;
+  width: calc(100% / 6);
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.nav .menu-item span {
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-family: "noto" , "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-weight: normal;
+}
+.nav .menu-item a {
+  color: black;
+}
+
+#gloval {
+  margin-bottom: 0px;
+}
+
+#gnavi {
+  float: left;
+  width: calc(100% / 1.2);
+}
+
+.gnav {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+  background-color: #fff;
+}
+.gnav__inner {
+  max-width: 1000px;
+  *zoom: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gnav__inner:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.gnav__contact {
+  margin-top: 10px;
+}
+
 /*********************
 	.intro
 **********************/
