@@ -4,137 +4,50 @@
   font-family: 'noto';
   font-style: normal;
   font-weight: 500;
-  src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.otf) format("opentype"); }
+  src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-DemiLight.otf) format("opentype");
+}
 @font-face {
   font-family: 'noto-bold';
   font-style: normal;
   font-weight: 500;
-  src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.otf) format("opentype"); }
+  src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Medium.otf) format("opentype");
+}
 /*  default  */
 html {
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 body {
   font-family: 'noto';
-  line-height: 1.7; }
+  line-height: 1.7;
+}
 
 * {
-  transition: all .5s; }
+  transition: all .5s;
+}
 
 /* default */
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 section:after, aside:after, article:after {
   content: "";
   display: block;
-  clear: both; }
+  clear: both;
+}
 
 /* add */
-section, aside {
-  margin-bottom: 45px; }
-
-.flex {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -webkit-flexbox;
-  display: -moz-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-
-.wrap {
-  max-width: 1000px;
+/*********************
+	.menu-banners
+**********************/
+.menu-banners__inner {
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 30px;
-  padding-bottom: 30px; }
-  .wrap:after {
-    content: "";
-    display: block;
-    clear: both; }
-
-article header {
-  margin-bottom: 30px; }
-
-/*title*/
-.title__main-1 {
-  text-align: center;
-  font-family: 'noto-bold';
-  margin-bottom: 0.2em;
-  font-size: 30px;
-  font-size: 1.875rem; }
-.title__desc {
+}
+.menu-banners__inner:after {
+  content: "";
   display: block;
-  text-align: center;
-  font-size: 10px;
-  font-size: 0.625rem; }
-
-.column__3 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-box;
-  display: -webkit-flexbox;
-  display: -moz-flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .column__3 section {
-    width: 32%;
-    margin-left: 2%;
-    float: left; }
-    .column__3 section:after {
-      content: "";
-      display: block;
-      clear: both; }
-    .column__3 section:first-child, .column__3 section:nth-child(3n+1) {
-      margin-left: 0px; }
-
-.price {
-  border: 1px solid #eee;
-  -moz-border-radius: 5px 5px 5px 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px 5px 5px 5px; }
-  .price header {
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    margin-bottom: 0px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    -moz-border-radius: 5px 5px 0px 0px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px 5px 0px 0px; }
-  .price__title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    font-family: 'noto-bold'; }
-  .price__description {
-    font-size: 12px;
-    font-size: 0.75rem; }
-  .price__list {
-    padding: 15px;
-    margin: 0px;
-    list-style-type: none; }
-    .price__list li {
-      border-bottom: 1px solid #eee;
-      padding: 0.3em 1em; }
-    .price__list-none {
-      text-decoration: line-through; }
+  clear: both;
+}

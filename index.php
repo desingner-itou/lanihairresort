@@ -72,53 +72,41 @@ Template Name: トップページ -
 <article class="menu-banners">
 	<div class="menu-banners__inner">
 
-		<div class="col-sm-3 col-xs-12">
-			<section class="menu-banners__item">
+		<div class="col-sm-30 col-xs-120">
+			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-1.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Campaign</h2>
 					<span class="menu-banners__item__sub">キャンペーン</span>
 				</div>
-				<div class="menu-banners__item__image">
-					<img src="<?php echo get_template_directory_uri() ?>/images/top_imgbn-1.png" alt="Campaign - キャンペーン">
-				</div>
 				<span class="menu-banners__item__allow"></span>
 			</section>
 		</div>
 
-		<div class="col-sm-3 col-xs-12">
-			<section class="menu-banners__item">
+		<div class="col-sm-30 col-xs-120">
+			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-2.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Concept</h2>
 					<span class="menu-banners__item__sub">コンセプト</span>
 				</div>
-				<div class="menu-banners__item__image">
-					<img src="<?php echo get_template_directory_uri() ?>/images/top_imgbn-2.png" alt="Concept - コンセプト">
-				</div>
 				<span class="menu-banners__item__allow"></span>
 			</section>
 		</div>
 
-		<div class="col-sm-3 col-xs-12">
-			<section class="menu-banners__item">
+		<div class="col-sm-30 col-xs-120">
+			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-3.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Menu</h2>
 					<span class="menu-banners__item__sub">メニュー</span>
 				</div>
-				<div class="menu-banners__item__image">
-					<img src="<?php echo get_template_directory_uri() ?>/images/top_imgbn-3.png" alt="Menu - メニュー">
-				</div>
 				<span class="menu-banners__item__allow"></span>
 			</section>
 		</div>
 
-		<div class="col-sm-3 col-xs-12">
-			<section class="menu-banners__item">
+		<div class="col-sm-30 col-xs-120">
+			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-4.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Salon Info</h2>
 					<span class="menu-banners__item__sub">サロン案内</span>
-				</div>
-				<div class="menu-banners__item__image">
-					<img src="<?php echo get_template_directory_uri() ?>/images/top_imgbn-4.png" alt="Salon Info - サロン案内">
 				</div>
 				<span class="menu-banners__item__allow"></span>
 			</section>
@@ -131,19 +119,19 @@ Template Name: トップページ -
 <aside class="banners">
 	<div class="banners__inner">
 
-		<div class="col-sm-4 col-xs-12">
+		<div class="col-sm-40 col-xs-120">
 			<a href="" target="_blank">
 				<img src="<?php echo get_template_directory_uri() ?>/images/bn-1.png" alt="ホットペッパービューティーでサロン予約">
 			</a>
 		</div>
 
-		<div class="col-sm-4 col-xs-12">
+		<div class="col-sm-40 col-xs-120">
 			<a href="" target="_blank">
 				<img src="<?php echo get_template_directory_uri() ?>/images/bn-2.png" alt="オンラインサロン予約はこちら">
 			</a>
 		</div>
 
-		<div class="col-sm-4 col-xs-12">
+		<div class="col-sm-40 col-xs-120">
 			<a href="" target="_blank">
 				<img src="<?php echo get_template_directory_uri() ?>/images/bn-3.png" alt="お買い物はこちら">
 			</a>
