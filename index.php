@@ -14,16 +14,19 @@ Template Name: トップページ -
 	<div class="haeder__bg"></div>
 </header>
 
-<article class="intro">
-	<div class="intro__image_left">
-		<img src="<?php echo get_template_directory_uri() ?>/images/top-con-1-img-1.png" alt="ラニヘアリゾートのヘッドスパブース写真">
-	</div>
-	<div class="intro__image_right">
-		<img src="<?php echo get_template_directory_uri() ?>/images/top-con-1-img-2.png" alt="ラニヘアリゾートのヘッドスパブース写真">
-	</div>
-	<div class="intro__description">
-		<?php the_content() ?>
-		<span class="intro__more">more read</span>
+<article class="intro parallax">
+	<div class="intro__inner parallax__inner">
+		<div class="intro__image_left parallax__0">
+			<img src="<?php echo get_template_directory_uri() ?>/images/top-con-1-img-1.png" alt="ラニヘアリゾートのヘッドスパブース写真">
+		</div>
+		<div class="intro__image_right parallax__2">
+			<img src="<?php echo get_template_directory_uri() ?>/images/top-con-1-img-2.png" alt="ラニヘアリゾートのヘッドスパブース写真">
+		</div>
+		<div class="intro__description parallax__1">
+			<?php the_content() ?>
+			<span class="intro__allow"></span>
+			<!-- <span class="intro__allow">more read</span> -->
+		</div>
 	</div>
 </article>
 
@@ -41,28 +44,28 @@ Template Name: トップページ -
 	</header>
 
 	<section class="news-items">
-		<time class="news-items__date">2017.01.01</time>
+		<div class="news-items__date"><time>2017.01.01</time></div>
 		<div class="news-items__description">
 			<p>お知らせタイトルが入ります。お知らせタイトルが入ります。お知らせタイトルが入ります。</p>
 		</div>
 	</section>
 
 	<section class="news-items">
-		<time class="news-items__date">2017.01.01</time>
+		<div class="news-items__date"><time>2017.01.01</time></div>
 		<div class="news-items__description">
 			<p>お知らせタイトルが入ります。お知らせタイトルが入ります。お知らせタイトルが入ります。</p>
 		</div>
 	</section>
 
 	<section class="news-items">
-		<time class="news-items__date">2017.01.01</time>
+		<div class="news-items__date"><time>2017.01.01</time></div>
 		<div class="news-items__description">
 			<p>お知らせタイトルが入ります。お知らせタイトルが入ります。お知らせタイトルが入ります。</p>
 		</div>
 	</section>
 
 	<section class="news-items">
-		<time class="news-items__date">2017.01.01</time>
+		<div class="news-items__date"><time>2017.01.01</time></div>
 		<div class="news-items__description">
 			<p>お知らせタイトルが入ります。お知らせタイトルが入ります。お知らせタイトルが入ります。</p>
 		</div>
@@ -72,7 +75,7 @@ Template Name: トップページ -
 <article class="menu-banners">
 	<div class="menu-banners__inner">
 
-		<div class="col-sm-30 col-xs-120">
+		<div class="col-sm-30 col-xs-60">
 			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-1.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Campaign</h2>
@@ -82,7 +85,7 @@ Template Name: トップページ -
 			</section>
 		</div>
 
-		<div class="col-sm-30 col-xs-120">
+		<div class="col-sm-30 col-xs-60">
 			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-2.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Concept</h2>
@@ -92,7 +95,7 @@ Template Name: トップページ -
 			</section>
 		</div>
 
-		<div class="col-sm-30 col-xs-120">
+		<div class="col-sm-30 col-xs-60">
 			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-3.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Menu</h2>
@@ -102,7 +105,7 @@ Template Name: トップページ -
 			</section>
 		</div>
 
-		<div class="col-sm-30 col-xs-120">
+		<div class="col-sm-30 col-xs-60">
 			<section class="menu-banners__item" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-4.png)">
 				<div class="menu-banners__item__header">
 					<h2 class="menu-banners__item__title">Salon Info</h2>

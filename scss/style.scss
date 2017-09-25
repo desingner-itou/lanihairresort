@@ -77,15 +77,149 @@ $width: 1080px;
 	margin-right: auto;
 }
 
-@mixin allow(){
 
+@mixin allow(){
+	&:after{
+		content:'';
+		width: 75px;
+		height: 1px;
+		display: block;
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		background-color: darken($black, 100%);
+	}
+	&:before{
+		content:'';
+		width: 15px;
+		height: 1px;
+		background-color: darken($black, 100%);
+		transform: rotate(45deg);
+		position: absolute;
+		right: 18px;
+		bottom: 25px;
+	}
 }
 
+
+/*********************
+	.intro
+**********************/
+.intro{
+	margin-bottom: 120px;
+	padding-top: 110px;
+	background:transparent url('../images/bg-1.png') center top no-repeat;
+	@media screen and (max-width: 768px){
+		background-size: contain;
+	}
+	&__inner{
+		position: relative;
+		@include wrap;
+		min-height: 100vh;
+	}
+	&__image_left,&__image_right,&__description{
+		position: absolute;
+	}
+	&__image{
+		&_left{
+			top: 0px;
+			left: 60px;
+		}
+		&_right{
+			top: 176px;
+			right: -100px;
+		}
+	}
+	&__description{
+		top: 345px;
+		left: 0px;
+		max-width: 610px;
+		box-sizing: border-box;
+		padding: 40px;
+		background-color: $white;
+	}
+	&__allow{
+		@include allow;
+	}
+}
+
+// .parallax{
+// 	.inner{
+// 		position: relative;
+// 		// padding: 25vh 10%;
+// 		min-height: 100vh;
+// 		// width: 100vw;
+// 		box-sizing: border-box;
+// 		box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+// 		transform-style: inherit;
+// 		perspective: 1px;
+// 		transform-style: preserve-3d;
+// 	}
+// 	&__0{
+// 		transform: translateZ(.25px) scale(1) translateX(-94%) translateY(-100%);
+// 	}
+// 	&__1{
+// 		transform: translateZ(.4px) scale(1) translateX(-104%) translateY(-40%);
+// 	}
+// 	&__2{
+// 		-webkit-transform:translateZ(-300px) scale(1);
+// 		-moz-transform:translateZ(-300px) scale(1);
+// 		-ms-transform:translateZ(-300px) scale(1);
+// 		-o-transform:translateZ(-300px) scale(1);
+// 		transform:translateZ(-300px) scale(1);
+// 		z-index:3;
+// 	}
+// }
+
+/*********************
+	.info
+**********************/
+.info{
+	padding: 90px 0px;
+	text-align: center;
+	margin-bottom: 120px;
+	background:transparent url('../images/bg-2.png') center center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	@media screen and (max-width: 768px){
+		background-size: contain;
+		background-attachment: scroll;
+	}
+}
+
+/*********************
+	.news
+**********************/
+.news{
+	margin-bottom: 120px;
+	&__header{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+}
+.news-items{
+	@include wrap(700px);
+	display: table;
+	margin-bottom: 2em;
+	&__date,&__description{
+		display: table-cell;
+	}
+	&__date{
+		padding-right: 1em;
+	}
+	&__description{
+		width: 85%;
+		p{
+			margin: 0px;
+		}
+	}
+}
 
 /*********************
 	.menu-banners
 **********************/
 .menu-banners{
+	margin-bottom: 120px;
 	&__inner{
 		// @include wrap;
 		@include cf;
@@ -95,6 +229,39 @@ $width: 1080px;
 		height: 480px;
 		background-size: cover;
 		background-position-x: center;
+		@media screen and (max-width: 480px){
+			height: 300px;
+		}
+		// overflow: hidden;
+		// position: relative;
+		// z-index: 0;
+		// &:before{
+		// 	-webkit-filter: blur(0px);
+		// 	-moz-filter: blur(0px);
+		// 	-o-filter: blur(0px);
+		// 	-ms-filter: blur(0px);
+		// 	filter: blur(0px);
+		// }
+		// &:hover{
+		// 	&:before{
+		// 		content: '';
+		// 		background:inherit;
+		// 		-webkit-filter: blur(5px);
+		// 		-moz-filter: blur(5px);
+		// 		-o-filter: blur(5px);
+		// 		-ms-filter: blur(5px);
+		// 		filter: blur(5px);
+		// 		// position: absolute;
+		// 		// z-index: -1;
+  // 			position: absolute;
+  // 			/*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+  // 			top: -5px;
+  // 			left: -5px;
+  // 			right: -5px;
+  // 			bottom: -5px;
+  // 			z-index: -1;/*重なり順序を一番下にしておく*/
+		// 	}
+		// }
 		&__header{
 		}
 		&__title{
@@ -113,23 +280,22 @@ $width: 1080px;
 			color: darken($black, 100%);
 		}
 		&__allow{
-			width: 75px;
-			height: 1px;
-			display: block;
-			position: absolute;
-			right: 20px;
-			bottom: 20px;
-			background-color: darken($black, 100%);
-			&:after{
-				content:'';
-				width: 15px;
-				height: 1px;
-				background-color: darken($black, 100%);
-				transform: rotate(45deg);
-				position: absolute;
-				right: -1px;
-				bottom: 6px;
-			}
+			@include allow;
+		}
+	}
+}
+
+
+/*********************
+	.banners
+**********************/
+.banners{
+	margin-bottom: 120px;
+	&__inner{
+		@include wrap(888px);
+		>div{
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 }
