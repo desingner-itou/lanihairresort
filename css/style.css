@@ -1,5 +1,12 @@
+@charset "UTF-8";
 /* box-shadow */
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@font-face {
+  font-family: 'noto-light';
+  font-style: normal;
+  font-weight: 500;
+  src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.woff2) format("woff2"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.woff) format("woff"), url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.otf) format("opentype");
+}
 @font-face {
   font-family: 'noto';
   font-style: normal;
@@ -20,6 +27,7 @@ html {
 body {
   font-family: 'noto';
   line-height: 1.7;
+  color: #505050;
 }
 
 * {
@@ -31,10 +39,17 @@ img {
   max-width: 100%;
 }
 
+section, aside, article {
+  *zoom: 1;
+}
 section:after, aside:after, article:after {
-  content: "";
-  display: block;
+  content: '';
+  display: table;
   clear: both;
+}
+
+h2 {
+  margin-top: 0px;
 }
 
 /* add */
@@ -42,12 +57,52 @@ section:after, aside:after, article:after {
 	.menu-banners
 **********************/
 .menu-banners__inner {
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
+  *zoom: 1;
 }
 .menu-banners__inner:after {
-  content: "";
-  display: block;
+  content: '';
+  display: table;
   clear: both;
+}
+.menu-banners__item {
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-position-x: center;
+}
+.menu-banners__item__title {
+  padding-top: 0.6em;
+  text-align: center;
+  font-size: 36px;
+  font-size: 2.25rem;
+  margin-bottom: 0px;
+  font-style: italic;
+  font-family: "noto-light" , "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  color: black;
+}
+.menu-banners__item__sub {
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem;
+  display: block;
+  color: black;
+}
+.menu-banners__item__allow {
+  width: 75px;
+  height: 1px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: black;
+}
+.menu-banners__item__allow:after {
+  content: '';
+  width: 15px;
+  height: 1px;
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  right: -1px;
+  bottom: 6px;
 }

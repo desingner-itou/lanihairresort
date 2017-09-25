@@ -4,6 +4,14 @@
 
 @import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 @font-face {
+   font-family: 'noto-light';
+   font-style: normal;
+   font-weight: 500;
+   src: url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.woff2) format('woff2'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.woff) format('woff'),
+        url(http://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
    font-family: 'noto';
    font-style: normal;
    font-weight: 500;
@@ -22,7 +30,7 @@
 
 $light-gray: #eee;
 $white: #fff;
-$black: #000;
+$black: #505050;
 
 $color-border: $light-gray;
 
@@ -35,6 +43,7 @@ html{
 body{
 	font-family: 'noto';
 	line-height: 1.7;
+	color: $black;
 }
 *{
 	transition: all .5s;
@@ -53,6 +62,9 @@ img{
 section,aside,article{
 	@include cf;
 }
+h2{
+	margin-top: 0px;
+}
 
 /* add */
 
@@ -65,6 +77,9 @@ $width: 1080px;
 	margin-right: auto;
 }
 
+@mixin allow(){
+
+}
 
 
 /*********************
@@ -72,20 +87,49 @@ $width: 1080px;
 **********************/
 .menu-banners{
 	&__inner{
-		@include wrap;
+		// @include wrap;
+		@include cf;
 	}
 	&__item{
+		position: relative;
+		height: 480px;
+		background-size: cover;
+		background-position-x: center;
 		&__header{
-
 		}
 		&__title{
-
+			padding-top: 0.6em;
+			text-align: center;
+			@include font-size(36);
+			margin-bottom: 0px;
+			font-style: italic;
+			@include sans-serif('noto-light');
+			color: darken($black, 100%);
 		}
 		&__sub{
-
+			text-align: center;
+			@include font-size(16);
+			display: block;
+			color: darken($black, 100%);
 		}
 		&__allow{
-			
+			width: 75px;
+			height: 1px;
+			display: block;
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			background-color: darken($black, 100%);
+			&:after{
+				content:'';
+				width: 15px;
+				height: 1px;
+				background-color: darken($black, 100%);
+				transform: rotate(45deg);
+				position: absolute;
+				right: -1px;
+				bottom: 6px;
+			}
 		}
 	}
 }
