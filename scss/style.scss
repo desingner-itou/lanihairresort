@@ -44,8 +44,6 @@ a{
 	}
 }
 
-
-
 /* default */
 
 img{
@@ -58,92 +56,36 @@ section,aside,article{
 
 /* add */
 
-section,aside{
-	margin-bottom: 45px;
-}
-.flex{
-	@include flex;
-}
+$width: 1080px;
 
-.wrap{
-	max-width: 1000px;
+@mixin wrap($width:$width) {
+	max-width: $width;
 	@include cf;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-
-article{
-	header{
-		margin-bottom: 30px;
-	}
 }
 
 
-/*title*/
 
-
-
-.title{
-	&__main-1{
-		text-align: center;
-		font-family: 'noto-bold';
-		margin-bottom: 0.2em;
-		@include font-size(30);
+/*********************
+	.menu-banners
+**********************/
+.menu-banners{
+	&__inner{
+		@include wrap;
 	}
-	&__desc{
-		display: block;
-		text-align: center;
-		@include font-size(10);
-	}
-}
+	&__item{
+		&__header{
 
-.column{
-	&__3{
-		@include flex;
-		section{
-			@include cf;
-			width: 32%;
-			margin-left: 2%;
-			float: left;
-			&:first-child,
-			&:nth-child(3n+1){
-				margin-left: 0px;
-			}
 		}
-	}
-}
+		&__title{
 
-.price{
-	border: 1px solid $color-border;
-	@include border-radius(5px 5px 5px 5px);
-	header{
-		text-align: center;
-		background-color: $black;
-		color: $white;
-		margin-bottom: 0px;
-		padding-top: 20px;
-		padding-bottom: 30px;
-		@include border-radius(5px 5px 0px 0px);
-	}
-	&__title{
-		@include font-size(24);
-		font-family: 'noto-bold';
-	}
-	&__description{
-		@include font-size(12);
-	}
-	&__list{
-		padding: 15px;
-		margin: 0px;
-		list-style-type: none;
-		li{
-			border-bottom: 1px solid $color-border;
-			padding: 0.3em 1em;
 		}
-		&-none{
-			text-decoration: line-through;
+		&__sub{
+
+		}
+		&__allow{
+			
 		}
 	}
 }
