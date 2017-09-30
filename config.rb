@@ -1,5 +1,8 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
+cache = true
+cache_path = 'C:/temp/sass/'
+
 
 # Set this to the root of your project when deployed:
 http_path = "./"
