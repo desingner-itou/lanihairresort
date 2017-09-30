@@ -4,7 +4,8 @@ import 'bootstrap'
 import $ from 'jquery'
 
 
-const BASEURL = "/lani/index.php/wp-json/wp/v2";
+// const BASEURL = "/lani/index.php/wp-json/wp/v2";
+const BASEURL = "/index.php/wp-json/wp/v2";
 
 if (document.getElementById('staffs')) {
   const staffsInstance = new Vue({

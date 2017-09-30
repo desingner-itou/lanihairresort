@@ -77,6 +77,9 @@ function my_acf_google_map_api( $api ){
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
+add_filter( 'allow_major_auto_core_updates', '__return_true' );
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'auto_update_translation', '__return_false' );
 
 ?>
 

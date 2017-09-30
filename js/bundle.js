@@ -955,7 +955,8 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var BASEURL = "/lani/index.php/wp-json/wp/v2";
+// const BASEURL = "/lani/index.php/wp-json/wp/v2";
+var BASEURL = "/index.php/wp-json/wp/v2";
 
 if (document.getElementById('staffs')) {
   var staffsInstance = new _vue2.default({
