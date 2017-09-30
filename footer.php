@@ -6,8 +6,8 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png">
 				</div>
 				<div class="footer__info">
-					<p><b>[営業時間]</b>平日 11:00～21:00  /  土曜日 10:00～20:00  /  日・祝日 10:00～19:00</p>
-					<p><b>[定休日]</b>月曜日</p>
+					<p><b>[営業時間]</b>平日 11:00～20:00  /  土曜日 10:00～19:00  /  日・祝日 10:00～18:30</p>
+					<p><b>[定休日]</b>月曜日・第二火曜日</p>
 				</div>
 				<?php
 					wp_nav_menu(
@@ -47,7 +47,7 @@
   	function inimap() {
   	 map = new google.maps.Map(document.getElementById('map'), { // #sampleに地図を埋め込む
   		  center: center, // 地図の中心を指定
-  		  zoom: 15, // 地図のズームを指定
+  		  zoom: 16, // 地図のズームを指定
 				styles:[{
 					"stylers": [{
 						"hue": "#51C0CB"
@@ -69,8 +69,8 @@
   		var map2;
   		var marker2;
   		var center2 = {
-  		  lat: 34.6720401, // 緯度
-  		  lng: 135.4931269, // 経度
+  		  lat: 34.6719901, // 緯度
+  		  lng: 135.4931443, // 経度
   		}
   		function inimap() {
   		 map2 = new google.maps.Map(document.getElementById('map2'), { // #sampleに地図を埋め込む
