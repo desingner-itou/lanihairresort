@@ -23,7 +23,6 @@ Template Name: コンセプト -
 </header>
 
 
-
 <article class="intro parallax intro__layout_left intro__sub">
 	<section class="intro__inner parallax__inner">
 		<div class="intro__image_left parallax__layer" data-layer="0">
