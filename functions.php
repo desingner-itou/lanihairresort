@@ -77,9 +77,22 @@ function my_acf_google_map_api( $api ){
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
+// WPのメジャーアップデート、マイナーアップデート自動更新
 add_filter( 'allow_major_auto_core_updates', '__return_true' );
+add_filter( 'allow_minor_auto_core_updates', '__return_true' );
+
+// プラグインの自動更新
 add_filter( 'auto_update_plugin', '__return_true' );
-add_filter( 'auto_update_translation', '__return_false' );
+
+
+// WPjQuery読み込み拒否
+function stop_wp_jq() {
+if ( !is_admin() ) {
+wp_deregister_script('jquery');
+wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3');
+}
+}
+add_action('init', 'stop_wp_jq');
 
 ?>
 

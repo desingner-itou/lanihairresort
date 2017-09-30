@@ -32,5 +32,5 @@ module.exports = {
     // vue.js のビルドを指定する
       vue: 'vue/dist/vue.common.js'
     }
-  }
+  },
 };
