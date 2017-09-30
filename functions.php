@@ -62,8 +62,12 @@ add_action( 'init', 'create_post_type' ); // アクションに上記関数を�
 add_theme_support( 'post-thumbnails' ); // アイキャッチ画像を全投稿で共通して使えるように
 
 
+// メニュー機能init
 register_nav_menus();
+
+// サムネイル機能init
 add_theme_support('post-thumbnails');
+
 // メニューのタイトル下に左部見出しをつける
 function description_in_nav_menu($item_output, $item){
     return preg_replace('/(<a.*?>[^<]*?)</', '$1' . "<br /><span>{$item->attr_title}</span><", $item_output);
@@ -87,12 +91,13 @@ add_filter( 'auto_update_plugin', '__return_true' );
 
 // WPjQuery読み込み拒否
 function stop_wp_jq() {
-if ( !is_admin() ) {
-wp_deregister_script('jquery');
-wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), '1.11.3');
-}
+if ( !is_admin() ) {  wp_deregister_script('jquery'); }
 }
 add_action('init', 'stop_wp_jq');
+
+// WPの絵文字機能読み込み拒否
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' ); 
 
 ?>
 
