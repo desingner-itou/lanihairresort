@@ -27,7 +27,7 @@
 				);
 			?>
 			<div class="gnav__contact">
-				<a href="" target="_blank">
+				<a href="http://lani.pos-s.net/hp/m/yoyaku/yoyaku_s.php?flow=2&clear=1&shop_cd=1" target="_blank">
 					<img src="<?php echo get_template_directory_uri() ?>/images/nav_bn.png" alt="オンライン予約はこちら">
 				</a>
 			</div>
