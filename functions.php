@@ -23,9 +23,20 @@ function create_post_type() {
     )
   );
 
-  register_post_type( 'style',  // カスタム投稿名
+  // register_post_type( 'style',  // カスタム投稿名
+  //   array(
+  //     'label' => 'スタイル',  // 管理画面の左メニューに表示されるテキスト
+  //     'public' => true,  // 投稿タイプをパブリックにするか否か
+  //     'has_archive' => true,  // アーカイブを有効にするか否か
+  //     'show_in_rest' => true, //APIから取得できるようにするか
+  //     'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
+  //     'supports' => $options,  // 投稿画面でどのmoduleを使うか的な設定
+  //   )
+  // );
+
+  register_post_type( 'menu',  // カスタム投稿名
     array(
-      'label' => 'スタイル',  // 管理画面の左メニューに表示されるテキスト
+      'label' => 'メニュー',  // 管理画面の左メニューに表示されるテキスト
       'public' => true,  // 投稿タイプをパブリックにするか否か
       'has_archive' => true,  // アーカイブを有効にするか否か
       'show_in_rest' => true, //APIから取得できるようにするか

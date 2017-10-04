@@ -3,7 +3,7 @@
 		<div class="footer__left">
 			<div class="footer__left_inner">
 				<div class="footer__image">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png">
+					<a href="<?php echo home_url() ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/footer-logo.png"></a>
 				</div>
 				<div class="footer__info">
 					<p><b>[営業時間]</b>平日 11:00～20:00  /  土曜日 10:00～19:00  /  日・祝日 10:00～18:30</p>

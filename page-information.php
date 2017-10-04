@@ -5,20 +5,6 @@ Template Name: 会社概要 -
 ?>
 <?php get_header();?>
 
-<header class="header">
-	<div class="header__inner  header__sub">
-		<div class="header__logo">
-			<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
-		</div>
-		<div class="header__catch">
-			<p>
-				Information
-			</p>
-		</div>
-		<div class="header__bg"></div>
-	</div>
-	<?php get_template_part( 'parts', 'glovalnav' ) ?>
-</header>
 
 <main>
 	<div class="information">

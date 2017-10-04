@@ -691,18 +691,21 @@ h2 {
 /*********************
 	.table
 **********************/
-.table {
-  display: table;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+.tablepress-table-name {
+  font-family: 'Oswald',sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.tablepress .column-1 {
+  font-family: 'noto-bold';
   border-bottom: 1px solid #505050;
 }
-.table__th, .table__td {
-  display: table-cell;
-}
-.table__th {
-  width: 6em;
-  font-family: 'noto-bold';
+.tablepress .column-2 {
+  width: 10em;
+  text-align: right;
+  border-bottom: 1px solid #505050;
 }
 
 /*********************
@@ -812,14 +815,14 @@ h2 {
 .salonmenu-item .table__td {
   text-align: right;
 }
-.salonmenu-item__right .salonmenu-item__description {
+.salonmenu-item:nth-child(even) .salonmenu-item__description {
   float: right;
 }
-.salonmenu-item__right .salonmenu-item__wrap {
+.salonmenu-item:nth-child(even) .salonmenu-item__wrap {
   margin-left: 0px;
   margin-right: auto;
 }
-.salonmenu-item__center .salonmenu-item__wrap {
+.salonmenu-item__other .salonmenu-item__wrap {
   margin-left: auto;
   margin-right: auto;
 }

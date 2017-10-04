@@ -5,25 +5,46 @@ Template Name: メニュー -
 ?>
 <?php get_header();?>
 
-<header class="header">
-	<div class="header__inner  header__sub">
-		<div class="header__logo">
-			<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
-		</div>
-		<div class="header__catch">
-			<p>
-				Menu
-			</p>
-		</div>
-		<div class="header__bg"></div>
-	</div>
-	<?php get_template_part( 'parts', 'glovalnav' ) ?>
-</header>
-
-<main>
+<main id="menus">
 	<article class="salonmenu">
 
-		<section class="salonmenu-item salonmenu-item__left">
+		<section class="salonmenu-item salonmenu-item__left" v-for="(menu,index) in menus">
+			<div class="salonmenu-item__inner">
+				<header class="salonmenu-item__header">
+					<h2 class="salonmenu-item__title">{{menu.slug}}</h2>
+					<span class="salonmenu-item__sub">{{menu.title.rendered}}</span>
+				</header>
+
+				<div v-if="menu.acf.menu_title || menu.acf.menu_description">
+					<div class="salonmenu-item__description" v-if="menu.acf.menu_title">
+						<h3 class="salonmenu-item__subtitle" v-html="menu.acf.menu_title"></h3>
+						<div class="menu-item__text" v-if="menu.acf.menu_description" v-html="menu.acf.menu_description"></div>
+					</div>
+					<div class="salonmenu-item__wrap">
+						<div class="salonmenu-item__table" v-if="menu.acf.menu_table" v-html="menu.acf.menu_table"></div>
+						<div class="salonmenu-item__table" v-if="menu.acf.menu_table2" v-html="menu.acf.menu_table2"></div>
+						<small>※すべて税抜表示です</small>
+					</div>
+				</div>
+
+				<div class="salonmenu-item__other" v-else>
+					<div class="col-sm-60 col-xs-120">
+						<div class="salonmenu-item__wrap">
+							<div class="salonmenu-item__table" v-html="menu.acf.menu_table"></div>
+						</div>
+					</div>
+					<div class="col-sm-60 col-xs-120">
+						<div class="salonmenu-item__wrap">
+							<div class="salonmenu-item__table" v-if="menu.acf.menu_table2" v-html="menu.acf.menu_table2"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+<!-- 		<section class="salonmenu-item salonmenu-item__left">
 			<div class="salonmenu-item__inner">
 				<header class="salonmenu-item__header">
 					<h2 class="salonmenu-item__title">Cut</h2>
@@ -55,6 +76,7 @@ Template Name: メニュー -
 						<div class="table__th">枝毛カット<small>（メンテナンスカット）</small></div>
 						<div class="table__td">￥3,000</div>
 					</div>
+					<small>※すべて税抜表示です</small>
 				</div>
 			</div>
 		</section>
@@ -104,6 +126,7 @@ Template Name: メニュー -
 						<div class="table__th">カラーのみの場合のシャンプー・ブロー代</div>
 						<div class="table__td">+￥1,000</div>
 					</div>
+					<small>※すべて税抜表示です</small>
 				</div>
 			</div>
 		</section>
@@ -160,6 +183,7 @@ Template Name: メニュー -
 						<div class="table__th">ポイントストレートパーマ<br><small>※カットなし</small></div>
 						<div class="table__td">￥3,000～</div>
 					</div>
+					<small>※すべて税抜表示です</small>
 				</div>
 			</div>
 		</section>
@@ -198,6 +222,7 @@ Template Name: メニュー -
 						<div class="table__th">iogus修復トリートメント</div>
 						<div class="table__td">￥3,000</div>
 					</div>
+					<small>※すべて税抜表示です</small>
 				</div>
 			</div>
 		</section>
@@ -238,6 +263,7 @@ Template Name: メニュー -
 						<div class="table__th">ロミロミスパ<small>（トリートメント付き）</small></div>
 						<div class="table__td">￥5,000</div>
 					</div>
+					<small>※すべて税抜表示です</small>
 				</div>
 			</div>
 		</section>
@@ -272,10 +298,11 @@ Template Name: メニュー -
 							<div class="table__th">眉カット（メンズ）</div>
 							<div class="table__td"></div>
 						</div>
+						<small>※すべて税抜表示です</small>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 
 	</article>
@@ -304,7 +331,7 @@ Template Name: メニュー -
 						<span class="tokuten-sub-item__tips">特典1</span>
 						<div class="tokuten-sub-item__description">
 							<p>ポイントカード制のメンバーズカードで、<b>ポイントを貯めて20%OFF</b>！！</p>
-							<p><b>スマホ版ポイントカードZeetle対応で、さらに便利でさらにお得。</b></p>
+							<!-- <p><b>スマホ版ポイントカードZeetle対応で、さらに便利でさらにお得。</b></p> -->
 						</div>
 					</div>
 				</section>
@@ -328,7 +355,8 @@ Template Name: メニュー -
 						<h3 class="tokuten-sub-item__title">次回特典</h3>
 						<span class="tokuten-sub-item__tips">特典3</span>
 						<div class="tokuten-sub-item__description">
-							<p>来店日より50日以内の次回来店は、<b>施術料金を10％OFF！60日以内</b>の次回来店は<b>8％OFF</b>にしております。</p>
+							<p>60日以内の次回来店は<b>施術料金を10％OFF</b>にしております。</p>
+							<!-- <p>来店日より50日以内の次回来店は、<b>施術料金を10％OFF！60日以内</b>の次回来店は<b>8％OFF</b>にしております。</p> -->
 							<p>定期的なご来店でお得にキレイになりますよ♪</p>
 						</div>
 					</div>
@@ -384,10 +412,10 @@ Template Name: メニュー -
 						<h4 class="system-item__excerpt__title">紹介でのご来店特典</h4>
 						<p>
 								技術料金
-							<span class="system-item__excerpt__price_main">30%OFF</span>
-								＋
+							<span class="system-item__excerpt__price_main">30%OFF</span><br>
+								<!-- ＋
 								ご紹介者様も
-							<span class="system-item__excerpt__price_main">次回30%OFF</span><br>
+							<span class="system-item__excerpt__price_main">次回30%OFF</span><br> -->
 							<small>（エクステ・セットは除きます。他の割引との併用はできません。）</small>
 						</p>
 					</div>

@@ -682,17 +682,35 @@ $width: 1080px;
 /*********************
 	.table
 **********************/
-.table{
-	display: table;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid $black;
-	&__th,&__td{
-		display: table-cell;
+// .table{
+// 	display: table;
+// 	margin-bottom: 10px;
+// 	padding-bottom: 10px;
+// 	border-bottom: 1px solid $black;
+// 	&__th,&__td{
+// 		display: table-cell;
+// 	}
+// 	&__th{
+// 		width: 6em;
+// 		font-family: 'noto-bold';
+// 	}
+// }
+
+.tablepress{
+	&-table-name{
+		font-family: 'Oswald',sans-serif;
+		@include font-size(20);
+		margin-bottom: 0px;
+		margin-top: 0px;
 	}
-	&__th{
-		width: 6em;
-		font-family: 'noto-bold';
+	.column-1{
+ 		font-family: 'noto-bold';
+		border-bottom: 1px solid $black;
+	}
+	.column-2{
+ 		width: 10em;
+ 		text-align: right;
+		border-bottom: 1px solid $black;
 	}
 }
 
@@ -767,7 +785,7 @@ $width: 1080px;
 			text-align: right;
 		}
 	}
-	&__right{
+	&:nth-child(even){
 		.salonmenu-item{
 			&__description{
 				float: right;
@@ -778,7 +796,7 @@ $width: 1080px;
 			}
 		}
 	}
-	&__center{
+	&__other{
 		.salonmenu-item__wrap{
 			margin-left: auto;
 			margin-right: auto;

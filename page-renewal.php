@@ -5,21 +5,6 @@ Template Name: リニューアルオープン -
 ?>
 <?php get_header();?>
 
-<header class="header">
-	<div class="header__inner  header__sub">
-		<div class="header__logo">
-			<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
-		</div>
-		<div class="header__catch">
-			<p>
-				Renewal
-			</p>
-		</div>
-		<div class="header__bg"></div>
-	</div>
-	<?php get_template_part( 'parts', 'glovalnav' ) ?>
-</header>
-
 <main>
 	<div class="renewal" style="background-image:url(<?php echo get_template_directory_uri() ?>/images/4.JPG);">
 		<div class="renewal__inner">

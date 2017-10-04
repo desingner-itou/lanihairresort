@@ -6,22 +6,6 @@ Template Name: コンセプト -
 <?php get_header();?>
 
 <main id="home">
-	
-<header class="header">
-	<div class="header__inner  header__sub">
-		<div class="header__logo">
-			<img src="<?php echo get_template_directory_uri() ?>/images/header-logo.png">
-		</div>
-		<div class="header__catch">
-			<p>
-				Concept
-			</p>
-		</div>
-		<div class="header__bg"></div>
-	</div>
-	<?php get_template_part( 'parts', 'glovalnav' ) ?>
-</header>
-
 
 <article class="intro parallax intro__layout_left intro__sub">
 	<section class="intro__inner parallax__inner">
