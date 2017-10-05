@@ -40,13 +40,13 @@ $(window).on('load',function(){
   var map;
   var marker;
   var center = {
-    lat: 34.6720401, // 緯度
-    lng: 135.4931269, // 経度
+    lat: 34.672039, // 緯度
+    lng: 135.493264, // 経度
   }
   function inimap() {
    map = new google.maps.Map(document.getElementById('map'), { // #sampleに地図を埋め込む
       center: center, // 地図の中心を指定
-      zoom: 16, // 地図のズームを指定
+      zoom: 17, // 地図のズームを指定
       styles:[{
         "stylers": [{
           "hue": "#51C0CB"
@@ -68,13 +68,13 @@ $(window).on('load',function(){
     var map2;
     var marker2;
     var center2 = {
-      lat: 34.6719901, // 緯度
-      lng: 135.4931443, // 経度
+      lat: 34.672039, // 緯度
+      lng: 135.493264, // 経度
     }
     function inimap() {
      map2 = new google.maps.Map(document.getElementById('map2'), { // #sampleに地図を埋め込む
         center: center2, // 地図の中心を指定
-        zoom: 15, // 地図のズームを指定
+        zoom: 17, // 地図のズームを指定
         styles:[{
           "stylers": [{
             "hue": "#51C0CB"
