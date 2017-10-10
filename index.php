@@ -88,7 +88,7 @@ Template Name: トップページ -
 				</div>
 				<span class="menu-banners__item__allow"></span>
 				<div class="menu-banners__item__bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/images/top_imgbn-3.png)">>
-					<a href="<?php home_url('/') ?>menu" class="menu-banners__item__link"></a>
+					<a href="<?php home_url('/') ?>menus" class="menu-banners__item__link"></a>
 				</div>
 			</section>
 		</div>
