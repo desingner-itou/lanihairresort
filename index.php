@@ -51,6 +51,68 @@ Template Name: トップページ -
 	</section>
 </article>
 
+<article class="pickup">
+	<div class="pickup__inner">
+		<header class="pickup__header">
+			<h2 class="pickup__title">ラニの<span class="pickup__title_num">3</span>つの特徴</h2>
+		</header>
+	
+		<section class="pickup-items col-sm-40 col-xs-120">
+			<span class="pickup-items__tips">POINT1</span>
+			<figure class="pickup-items__image">
+				<img src="<?php echo get_template_directory_uri() ?>/images/top-pickup_pct-1.jpg">
+			</figure>
+			<div class="pickup-items__contents">
+				<h3 class="pickup-items__title">キッズカット対応可能</h3>
+				<span class="pickup-items__sub">Can correspond to kids cut</span>
+				<div class="pickup-items__description">
+					<p>お子様のヘアカットをしたいが「美容室に迷惑がかかるかも」とお悩みの方のためにキッズカット用の個室をご用意しております。</p>
+				</div>
+<!-- 				<a href="<?php echo home_url('/') ?>/concept" class="pickup-items__allow_link">
+					<span class="pickup-items__allow_more">Read more</span>
+					<span class="pickup-items__allow"></span>
+				</a> -->
+			</div>
+		</section>
+	
+		<section class="pickup-items col-sm-40 col-xs-120">
+			<span class="pickup-items__tips">POINT2</span>
+			<figure class="pickup-items__image">
+				<img src="<?php echo get_template_directory_uri() ?>/images/top-pickup_pct-2.jpg">
+			</figure>
+			<div class="pickup-items__contents">
+				<h3 class="pickup-items__title">スキばさみを使用しない</h3>
+				<span class="pickup-items__sub">Do not use scissors scissors</span>
+				<div class="pickup-items__description">
+					<p>当店ではスキばさみを使わず、あえてシザーを用いてお一人お一人の理想のスタイル実現のために丁寧なカットを心がけております。</p>
+				</div>
+				<a href="<?php echo home_url('/') ?>/menus#menu0" class="pickup-items__allow_link">
+					<span class="pickup-items__allow_more">Read more</span>
+					<span class="pickup-items__allow"></span>
+				</a>
+			</div>
+		</section>
+	
+		<section class="pickup-items col-sm-40 col-xs-120">
+			<span class="pickup-items__tips">POINT3</span>
+			<figure class="pickup-items__image">
+				<img src="<?php echo get_template_directory_uri() ?>/images/top-pickup_pct-3.jpg">
+			</figure>
+			<div class="pickup-items__contents">
+				<h3 class="pickup-items__title">厳選したカラー剤を使用</h3>
+				<span class="pickup-items__sub">Use carefully selected coloring agents</span>
+				<div class="pickup-items__description">
+					<p>Lani hair resortは、色味だけでなく成分や性質、ダメージのことまで考慮し厳選したカラー剤を使用しております。</p>
+				</div>
+<!-- 				<a href="<?php echo home_url('/') ?>/concept" class="pickup-items__allow_link">
+					<span class="pickup-items__allow_more">Read more</span>
+					<span class="pickup-items__allow"></span>
+				</a> -->
+			</div>
+		</section>
+	</div>
+</article>
+
 <article class="menu-banners">
 	<div class="menu-banners__inner">
 

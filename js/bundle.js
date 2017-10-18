@@ -4586,8 +4586,8 @@ __webpack_require__(166);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// const BASEURL = "/lani/index.php/wp-json/wp/v2";
-var BASEURL = "/index.php/wp-json/wp/v2";
+var BASEURL = "/lani/index.php/wp-json/wp/v2";
+// const BASEURL = "/index.php/wp-json/wp/v2";
 
 if (document.getElementById('staffs')) {
   var staffsInstance = new _vue2.default({
@@ -4614,6 +4614,12 @@ if (document.getElementById('staffs')) {
           } else {
             _this.stylist.push(x);
           }
+        });
+        _this.$nextTick(function () {
+          location.hash = innerTarget;
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
         });
       });
     }
@@ -4645,6 +4651,12 @@ if (document.getElementById('styles')) {
           return 0;
         });
         _this2.styles = response.data;
+        _this2.$nextTick(function () {
+          location.hash = innerTarget;
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        });
       });
     }
   });
@@ -4675,6 +4687,12 @@ if (document.getElementById('campaigns')) {
           return 0;
         });
         _this3.campaigns = response.data;
+        _this3.$nextTick(function () {
+          location.hash = innerTarget;
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        });
       });
     }
   });
@@ -4699,6 +4717,12 @@ if (document.getElementById('menus')) {
           return 0;
         });
         _this4.menus = response.data;
+        _this4.$nextTick(function () {
+          location.hash = innerTarget;
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        });
       });
     }
   });

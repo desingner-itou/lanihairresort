@@ -3,8 +3,8 @@ import axios from 'axios'
 import 'bootstrap'
 import 'babel-polyfill'
 
-// const BASEURL = "/lani/index.php/wp-json/wp/v2";
-const BASEURL = "/index.php/wp-json/wp/v2";
+const BASEURL = "/lani/index.php/wp-json/wp/v2";
+// const BASEURL = "/index.php/wp-json/wp/v2";
 
 if (document.getElementById('staffs')) {
   const staffsInstance = new Vue({
@@ -31,6 +31,12 @@ if (document.getElementById('staffs')) {
 	      		this.stylist.push(x)
       		}
       	})
+        this.$nextTick(()=>{
+          location.hash = innerTarget
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        })
       })
     }
   })
@@ -59,6 +65,12 @@ if (document.getElementById('styles')) {
           return 0
       	})
       	this.styles = response.data
+        this.$nextTick(()=>{
+          location.hash = innerTarget
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        })
       })
     }
   })
@@ -87,6 +99,12 @@ if (document.getElementById('campaigns')) {
           return 0
       	})
       	this.campaigns = response.data
+        this.$nextTick(()=>{
+          location.hash = innerTarget
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        })
       })
     }
   })
@@ -111,6 +129,12 @@ if (document.getElementById('menus')) {
           return 0
         })
         this.menus = response.data
+        this.$nextTick(()=>{
+          location.hash = innerTarget
+          // const clientRect = document.getElementById(innerTarget).getBoundingClientRect()
+          // const y = clientRect.top
+          // console.log(y)
+        })
       })
     }
   })
