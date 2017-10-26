@@ -22,7 +22,7 @@ Template Name: メニュー -
 					</div>
 					<div class="salonmenu-item__wrap">
 						<div class="salonmenu-item__table" v-if="menu.acf.menu_table" v-html="menu.acf.menu_table"></div>
-						<div class="salonmenu-item__table" v-if="menu.acf.menu_table2" v-html="menu.acf.menu_table2"></div>
+						<!--<div class="salonmenu-item__table" v-if="menu.acf.menu_table2" v-html="menu.acf.menu_table2"></div>-->
 						<small>※すべて税抜表示です</small>
 					</div>
 				</div>
