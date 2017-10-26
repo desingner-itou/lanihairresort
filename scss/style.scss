@@ -733,23 +733,169 @@ $width: 1080px;
  		text-align: right;
 		border-bottom: 1px solid $black;
 	}
+	.table__normal &{
+		.column-1{
+ 			font-family: 'noto-bold';
+			border-bottom: 1px solid $black;
+		}
+		.column-2{
+ 			text-align: left;
+ 			width: auto;
+			border-bottom: 1px solid $black;
+		}
+
+	}
 }
+
+.tablepress-table-description{
+	@include font-size(12)
+}
+
 
 /*********************
 	.information
 **********************/
 .information{
-	@include mgb(80px);
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background:transparent url('../images/bg-3.png') center center no-repeat;
 	background-attachment: fixed;
+	position: relative;
 	&__inner{
-		@include wrap;
+		@include wrap(800px);
 		padding: 25px 40px;
-		background-color: rgba($white, .9);
+	}
+	&__overlay{
+		@include overlay;
+	}
+	&__title{
+		font-family: 'Oswald',sans-serif;
+		@include font-size(24);
+		margin-bottom: 40px;
+		margin-top: 0px;
+		text-align: center;
 	}
 }
+
+
+/*********************
+	.madori
+**********************/
+.madori{
+	&__inner{
+		@include wrap;
+		@include mgb;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	&__title{
+		font-family: 'Oswald',sans-serif;
+		@include font-size(24);
+		margin-bottom: 40px;
+		margin-top: 0px;
+	}
+}
+
+
+.pins{
+	&__wrap{
+		display: inline-block;
+		position: relative;
+		z-index: 1;
+	}
+
+	//pins
+	&__wating,&__cut,&__kids1,&__kids2,&__kids3,&__counter,&__backyard,&__color,&__shampoo,&__private{
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50% 50% 50% 50%;
+		background-color: rgba($navy, .5);
+		cursor: pointer;
+	}
+	&__wating{ 		left:16%;top:15%; }
+	&__cut{ 			left:50%;top:21%; }
+	&__kids1{ 		right:3%;top:7%; }
+	&__kids2{ 		right:20.6%;top:11%; }
+	&__kids3{ 		right:15%;top:40%; }
+	&__counter{ 	left:15%;top:43%; }
+	&__backyard{ 	left:16%;bottom:16%; }
+	&__color{ 		left:43%;bottom:11%; }
+	// &__shampoo{ 	left:59%;bottom:11%; }
+	&__private{ 	right:14%;bottom:11%; }
+
+	//modal
+	&__modal{
+		@include cf;
+		&_state_on{
+			opacity: 1;
+			transform: scale(1);
+		}
+		transition: all .5s ease-out;
+		position: fixed;
+		opacity: 0;
+		z-index: 9999;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		// background-color: rgba($black, .8);
+		transform: scale(0);
+		&_inner{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			max-width: 98%;
+			max-height: 98%;
+			// width: 100%;
+			box-sizing: border-box;
+			transform: translateX(-50%) translateY(-50%);
+			padding: 3px;
+			background-color: $white;
+			@media screen and (max-width: 768px){
+				width: 100%;
+			}
+		}
+		&__image{
+			max-height: 100%;
+		}
+		&_close{
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			width: 40px;
+			height: 40px;
+			display: block;
+			cursor: pointer;
+			&:before,&:after{
+				content: '';
+				width: 100%;
+				height: 2px;
+				background-color: $navy;
+				display: block;
+			}
+			&:before{
+				transform: rotate(-45deg);
+				margin-top: 18px;
+				
+			}
+			&:after{
+				transform: rotate(45deg);
+			}
+			&:hover{
+				&:before,&:after{
+					transition: all .2s ease-out;
+					transform: rotate(0deg);
+					width: 50%;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}
+
 
 /*********************
 	.salonmenu
@@ -1441,5 +1587,151 @@ $width: 1080px;
 		background-color: $navy;
 		color: $white;
 		font-family: 'noto-bold';
+	}
+}
+
+
+/*********************
+	.pickup
+**********************/
+
+.colors{
+	padding-top: 60px;
+	&__inner{
+		@include wrap;
+	}
+	&__header{
+		text-align: center;
+		margin-bottom: 60px;
+	}
+	&__title{
+		font-family: 'Oswald',sans-serif;
+		@include font-size(24);
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	&__sub{
+		@include font-size(16);
+	}
+}
+
+.colors-item{
+	position: relative;
+	@include mgb(60px);
+	.colors-item__left{
+		text-align: center;
+	}
+	.colors-item__right{
+				padding: 40px;
+				position: absolute;
+				bottom: 40px;
+				background-color: $white;
+				@media screen and (max-width: 768px){
+					padding: 20px;
+					position: relative;
+					left: auto !important;
+					bottom: auto;
+				}
+	}
+	// &__layout{
+		// &_left{
+		&:nth-child(even){
+			.colors-item__left{
+				padding-right: 15px;
+				@media screen and (max-width: 768px){
+					padding-right: 0px;
+				}
+			}
+			.colors-item__right{
+				left: 45%;
+			}
+		}
+		// &_right{
+		&:nth-child(odd){
+			.colors-item__left{
+				float: right;
+				padding-left: 15px;
+				@media screen and (max-width: 768px){
+					padding-left: 0px;
+					float: none;
+				}
+			}
+			.colors-item__right{
+				left: 5%;
+			}
+		}
+	// }
+	&__image{
+		max-height: 500px;
+		overflow: hidden;
+	}
+	&__title{
+		@include font-size(24);
+		@include sans-serif('noto-bold');
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	&__sub{
+		@include font-size(10);
+		display: block;
+		font-family: 'Oswald',sans-serif;
+	}
+	&__yakushoku{
+		display: block;
+		font-family: 'Oswald',sans-serif;
+		margin-bottom: 30px;
+	}
+	&__description{
+		@include font-size(12);
+		margin-bottom: 25px;
+		p:last-child{
+			margin-bottom: 0px;
+		}
+	}
+}
+
+
+/*********************
+	.kids
+**********************/
+
+.kids{
+	&__inner{
+		@include wrap;
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+}
+.kids-item{
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+	margin-bottom: 80px;
+	&__title{
+		@include font-size(18);
+		text-align: center;
+	}
+	&__description{
+		@include font-size(12);
+		p:last-child{ margin-bottom: 0px; }
+	}
+	&__inner{
+		padding: 60px 15px 15px;
+		background-color: $white;
+	}
+	&__image{
+		width: 100px;
+		height: 100px;
+		border-radius: 50% 50% 50% 50%;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		top: 0px;
+		transform: translateX(-50%) translateY(-50%);
+		img{
+			height: 100%;
+			max-width: 200%;
+			// position: absolute;
+		}
 	}
 }

@@ -68,10 +68,10 @@ Template Name: トップページ -
 				<div class="pickup-items__description">
 					<p>お子様のヘアカットをしたいが「美容室に迷惑がかかるかも」とお悩みの方のためにキッズカット用の個室をご用意しております。</p>
 				</div>
-<!-- 				<a href="<?php echo home_url('/') ?>/concept" class="pickup-items__allow_link">
+				<a href="<?php echo home_url('/') ?>/kids" class="pickup-items__allow_link">
 					<span class="pickup-items__allow_more">Read more</span>
 					<span class="pickup-items__allow"></span>
-				</a> -->
+				</a>
 			</div>
 		</section>
 	
@@ -104,10 +104,10 @@ Template Name: トップページ -
 				<div class="pickup-items__description">
 					<p>Lani hair resortは、色味だけでなく成分や性質、ダメージのことまで考慮し厳選したカラー剤を使用しております。</p>
 				</div>
-<!-- 				<a href="<?php echo home_url('/') ?>/concept" class="pickup-items__allow_link">
+				<a href="<?php echo home_url('/') ?>/color" class="pickup-items__allow_link">
 					<span class="pickup-items__allow_more">Read more</span>
 					<span class="pickup-items__allow"></span>
-				</a> -->
+				</a>
 			</div>
 		</section>
 	</div>

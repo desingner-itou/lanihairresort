@@ -118,6 +118,28 @@ function create_post_type() {
       'supports' => $options,  // 投稿画面でどのmoduleを使うか的な設定
     )
   );
+
+  register_post_type( 'item',  // カスタム投稿名
+    array(
+      'label' => 'カラー剤',  // 管理画面の左メニューに表示されるテキスト
+      'public' => true,  // 投稿タイプをパブリックにするか否か
+      'has_archive' => true,  // アーカイブを有効にするか否か
+      'show_in_rest' => true, //APIから取得できるようにするか
+      'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
+      'supports' => $options,  // 投稿画面でどのmoduleを使うか的な設定
+    )
+  );
+
+  register_post_type( 'kids',  // カスタム投稿名
+    array(
+      'label' => 'キッズ特徴',  // 管理画面の左メニューに表示されるテキスト
+      'public' => true,  // 投稿タイプをパブリックにするか否か
+      'has_archive' => true,  // アーカイブを有効にするか否か
+      'show_in_rest' => true, //APIから取得できるようにするか
+      'menu_position' => 5,  // 管理画面上でどこに配置するか今回の場合は「投稿」の下に配置
+      'supports' => $options,  // 投稿画面でどのmoduleを使うか的な設定
+    )
+  );
 }
 
 $args = array(

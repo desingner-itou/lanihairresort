@@ -1,10 +1,11 @@
+import $ from 'jquery'
 import Vue from 'vue'
 import axios from 'axios'
 import 'bootstrap'
 import 'babel-polyfill'
 
-const BASEURL = "/lani/index.php/wp-json/wp/v2";
-// const BASEURL = "/index.php/wp-json/wp/v2";
+// const BASEURL = "/lani/index.php/wp-json/wp/v2";
+const BASEURL = "/index.php/wp-json/wp/v2";
 
 if (document.getElementById('staffs')) {
   const staffsInstance = new Vue({
@@ -110,6 +111,75 @@ if (document.getElementById('campaigns')) {
   })
 }
 
+if (document.getElementById('color')) {
+  const colorInstance = new Vue({
+    el: "#color",
+    data() {
+      return {
+        colors: [],
+        errors: [],
+      };
+    },
+    methods:{
+      getThumbUrl(post){
+        if(post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['full']){
+          return post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['full']['source_url']
+        }else{
+          return false
+        }
+      },
+    },
+    mounted(){
+      axios.get(BASEURL+'/item?_embed&per_page=100')
+      .then( (response) => { 
+        response.data.sort( (a,b) => {
+          if(a.id<b.id) return -1
+          if(a.id > b.id) return 1
+          return 0
+        })
+        this.colors = response.data
+        this.$nextTick(()=>{
+          if(innerTarget) location.hash = innerTarget
+        })
+      })
+    }
+  })
+}
+
+if (document.getElementById('kids')) {
+  const kidsInstance = new Vue({
+    el: "#kids",
+    data() {
+      return {
+        kids: [],
+        errors: [],
+      };
+    },
+    methods:{
+      getThumbUrl(post){
+        if(post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['thumbnail']){
+          return post['_embedded']['wp:featuredmedia'][0]['media_details']['sizes']['thumbnail']['source_url']
+        }else{
+          return false
+        }
+      },
+    },
+    mounted(){
+      axios.get(BASEURL+'/kids?_embed&per_page=100')
+      .then( (response) => { 
+        response.data.sort( (a,b) => {
+          if(a.id<b.id) return -1
+          if(a.id > b.id) return 1
+          return 0
+        })
+        this.kids = response.data
+        this.$nextTick(()=>{
+          if(innerTarget) location.hash = innerTarget
+        })
+      })
+    }
+  })
+}
 
 if (document.getElementById('menus')) {
   const menusInstance = new Vue({
@@ -140,3 +210,26 @@ if (document.getElementById('menus')) {
   })
 }
 
+
+
+
+//pins
+
+if (document.getElementsByClassName('pins')) {
+  const pinsInstance = new Vue({
+    el: ".pins",
+    data() {
+      return {
+        // element: null,
+      };
+    },
+    methods:{
+      modalOn(img){
+        if(img) $('.pins__modal_image').attr('src',img)
+        $('.pins__modal').toggleClass('pins__modal_state_on')
+      }
+    },
+    mounted(){
+    }
+  })
+}
